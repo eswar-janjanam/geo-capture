@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:geo_capture/app/theme/app_theme.dart';
+import 'package:geo_capture/features/camera/camera_screen.dart';
 
 class GeoCaptureApp extends StatelessWidget {
   const GeoCaptureApp({super.key});
@@ -8,14 +10,8 @@ class GeoCaptureApp extends StatelessWidget {
     return MaterialApp(
       title: 'GeoCapture',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('GeoCapture'),
-        ),
-        body: const Center(
-          child: Text('Welcome to GeoCapture'),
-        ),
-      ),
+      theme: AppTheme.darkTheme,
+      home: const CameraScreen(),
     );
   }
 }
